@@ -28,3 +28,5 @@ export const makeRgba =
     const rgb = hexToRgb(color(name, shade)(props));
     return `rgba(${rgb.red}, ${rgb.green}, ${rgb.blue}, ${opacity})`;
   };
+
+export const zIndex = (layer) => (props) => props.theme.zIndex[layer];

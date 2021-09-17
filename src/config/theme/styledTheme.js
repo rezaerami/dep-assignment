@@ -1,6 +1,15 @@
 export default {
   defaultRem: '1rem',
   defaultFont: 'Teko-Regular',
+  containerWidth: '120rem',
+
+  zIndex: {
+    high: 999,
+    medium: 555,
+    low: 100,
+    unset: 0,
+  },
+
   colors: {
     white: {
       light: '#ffffff',
