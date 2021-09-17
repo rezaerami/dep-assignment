@@ -1,0 +1,35 @@
+@font-face {
+  font-family: Teko-Regular;
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url('../fonts/teko/Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: Teko-Regular;
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../fonts/teko/SemiBold.ttf') format('truetype');
+}
+@font-face {
+  font-family: Teko-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url('../fonts/teko/Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: Teko-Regular;
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('../fonts/teko/Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: Teko-Regular;
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url('../fonts/teko/Light.ttf') format('truetype');
+}

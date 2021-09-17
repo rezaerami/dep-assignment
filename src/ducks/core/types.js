@@ -1,0 +1,8 @@
+const coreTypes = {
+  INITIALIZE: 'INITIALIZE',
+  INITIALIZE_FINISHED: 'INITIALIZE_FINISHED',
+
+  SET_REDIRECT_TO: 'SET_REDIRECT_TO',
+};
+
+export default coreTypes;
