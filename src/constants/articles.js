@@ -19,6 +19,7 @@ import {
 export default [
   {
     id: 1,
+    type: 'ARTICLE',
     image: Bolcom,
     subtitle: 'Bol.com',
     title: 'A summer island in the Netherlands',
@@ -26,6 +27,7 @@ export default [
   },
   {
     id: 2,
+    type: 'ARTICLE',
     image: Kempen,
     subtitle: 'Kempen',
     title: 'Not some average banking website',
@@ -33,6 +35,7 @@ export default [
   },
   {
     id: 3,
+    type: 'ARTICLE',
     image: Philips,
     subtitle: 'Philips',
     title: 'Beautiful design meets innovative technology',
@@ -40,6 +43,7 @@ export default [
   },
   {
     id: 4,
+    type: 'ARTICLE',
     image: Gemeentemuseum,
     subtitle: 'Gemeentemuseum',
     title: 'A 100 years of Mondriaan & De Stijl',
@@ -47,6 +51,7 @@ export default [
   },
   {
     id: 5,
+    type: 'ARTICLE',
     image: Florensis,
     subtitle: 'Florensis',
     title: 'Rethinking the entire online ecosystem',
@@ -69,6 +74,7 @@ export default [
   },
   {
     id: 8,
+    type: 'ARTICLE',
     image: Lightning,
     subtitle: 'Be Lighting',
     title: 'Delivering clarity on a global scale',
@@ -76,6 +82,7 @@ export default [
   },
   {
     id: 9,
+    type: 'ARTICLE',
     image: Tui,
     subtitle: 'Tui',
     title: 'Swipe to find your next holiday destination',
@@ -83,6 +90,7 @@ export default [
   },
   {
     id: 12,
+    type: 'ARTICLE',
     image: Florensis,
     subtitle: 'Florensis',
     title: 'Rethinking the entire online ecosystem',
@@ -105,6 +113,7 @@ export default [
   },
   {
     id: 13,
+    type: 'ARTICLE',
     image: Chocomel,
     subtitle: 'Chocomel',
     title: 'Rethinking the entire online ecosystem',
@@ -112,6 +121,7 @@ export default [
   },
   {
     id: 14,
+    type: 'ARTICLE',
     image: Jbl,
     subtitle: 'JBL',
     title: 'Live like a champion with Jerome Booteng',
@@ -119,6 +129,7 @@ export default [
   },
   {
     id: 15,
+    type: 'ARTICLE',
     image: Zalando,
     subtitle: 'zalando',
     title: 'Innovative SEO and content strategy for Zalando',
@@ -126,9 +137,33 @@ export default [
   },
   {
     id: 16,
-    image: libertyGlobal,
+    type: 'ARTICLE',
+    image: KoninklijkeBibliotheek,
     subtitle: 'Koninklijke Bibliotheek',
     title: 'The search for the most influential book ever',
+    ads: [],
+  },
+  {
+    id: 17,
+    type: 'COMMENT',
+    author: 'MATTIJS TEN BRINK – CEO, TRANSAVIA',
+    description:
+      '“Dept helped us tell our story through a bold new identity and a robust online experience. To the tune of 60% growth in online bookings in just one month.”',
+  },
+  {
+    id: 18,
+    type: 'ARTICLE',
+    image: Arla,
+    subtitle: 'Liberty Global',
+    title: 'Delivering complex commerce solutions',
+    ads: [],
+  },
+  {
+    id: 19,
+    type: 'ARTICLE',
+    image: libertyGlobal,
+    subtitle: 'Arla',
+    title: 'Swipe to find your next holiday destination',
     ads: [],
   },
 ];

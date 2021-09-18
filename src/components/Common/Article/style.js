@@ -59,10 +59,10 @@ export const StyledAdWrapper = Styled.div`
   width: 33%;
   padding-left: 3rem;
   > * {
-    border-bottom: 0.1rem solid ${color('gray', 'main')};
+    border-bottom: 0.1rem solid ${color('white', 'dark')};
     padding-bottom: 8rem;
     &:first-child {
-      border-top: 0.1rem solid ${color('gray', 'main')};
+      border-top: 0.1rem solid ${color('white', 'dark')};
     }
   }
 `;

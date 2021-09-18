@@ -6,6 +6,14 @@ import { Container } from 'components/Globals';
 export const StyledNavMenuWrapper = Styled.nav`
   width: 100%;
   color: ${color('black', 'main')};
+  transition: all 0.15s ease-in 0s;
+
+  &.active {
+    background-color: ${color('white', 'light')};
+    > * {
+      border: none;
+    }
+  }
 
   &.is-mega-menu-open {
     background-color: ${color('black', 'main')};
