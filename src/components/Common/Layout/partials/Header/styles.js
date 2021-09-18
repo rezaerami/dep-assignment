@@ -9,7 +9,7 @@ export const StyledHeaderWrapper = Styled.header`
   background: url(${Header}) center center no-repeat scroll
     ${color('white', 'main')};
   background-size: cover;
-  height: 94vh;
+  height: 94rem;
 `;
 
 export const StyledHeaderContainer = Styled(Container)`
@@ -29,7 +29,7 @@ export const StyledTitle = Styled.h1`
   letter-spacing: normal;
   margin: 0;
   text-align: left;
-  margin-top: 9rem;
+  margin-top: 11rem;
 `;
 
 export const StyledLink = Styled(Link)`

@@ -11,3 +11,4 @@ export { default as Lightning } from './lightning.png';
 export { default as Philips } from './philips.png';
 export { default as Tui } from './tui.png';
 export { default as Zalando } from './zalando.png';
+export { default as Chocomel } from './Chocomel.jpg';
