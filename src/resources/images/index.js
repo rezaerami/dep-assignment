@@ -1,0 +1,13 @@
+export { default as Arla } from './arla.png';
+export { default as Bolcom } from './bolcom.png';
+export { default as Florensis } from './florensis.png';
+export { default as Gemeentemuseum } from './gemeentemuseum.png';
+export { default as Header } from './Header.jpg';
+export { default as Jbl } from './jbl.png';
+export { default as Kempen } from './kempen.png';
+export { default as KoninklijkeBibliotheek } from './koninklijke-bibliotheek.png';
+export { default as libertyGlobal } from './liberty-global.png';
+export { default as Lightning } from './lightning.png';
+export { default as Philips } from './philips.png';
+export { default as Tui } from './tui.png';
+export { default as Zalando } from './zalando.png';

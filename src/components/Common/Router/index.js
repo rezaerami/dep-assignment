@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { Switch, Route } from 'react-router-dom';
-import routers from 'components/Common/Router/constants/routers';
+import routers from 'components/Common/Router/routers';
 
 const Router = () => {
   const pages = routers.map(

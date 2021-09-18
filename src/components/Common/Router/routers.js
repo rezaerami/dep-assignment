@@ -1,5 +1,5 @@
 import { HomePage } from 'components/Pages';
-import routes from 'components/Common/Router/constants/routes';
+import routes from 'constants/routes';
 
 import Layout from 'components/Common/Layout';
 
