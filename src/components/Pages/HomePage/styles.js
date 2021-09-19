@@ -11,7 +11,7 @@ export const StyledArticlesWrapper = Styled.div`
     flex: 1;
     min-width: 50%;
     padding: 0 1.5rem;
-    &.has-ads {
+    &.has-ads, &.comment {
       min-width: 100%;
     }
   }

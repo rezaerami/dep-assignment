@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useRef, useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
@@ -17,10 +17,27 @@ import {
 } from './styles';
 
 const NavMenu = ({ className }) => {
+  const navMenuRef = useRef();
+
+  const handleNavClass = useCallback(() => {
+    if (window.scrollY >= navMenuRef.current.offsetHeight) {
+      navMenuRef.current.classList.add('active');
+    } else {
+      navMenuRef.current.classList.remove('active');
+    }
+  }, [navMenuRef]);
+
   const { isMegaMenuVisible, setIsMegaMenuVisible } = useContext(LayoutContext);
+  useEffect(handleNavClass, [isMegaMenuVisible]);
+  useEffect(() => {
+    window.addEventListener('scroll', handleNavClass);
+
+    return () => window.removeEventListener('scroll', handleNavClass);
+  }, []);
 
   return (
     <StyledNavMenuWrapper
+      ref={navMenuRef}
       className={classNames(className, {
         'is-mega-menu-open': isMegaMenuVisible,
       })}
@@ -38,7 +55,7 @@ const NavMenu = ({ className }) => {
               <MenuIcon />
             </>
           )}
-          {isMegaMenuVisible && <CrossIcon width="2.4rem" height="2.4rem" />}
+          {isMegaMenuVisible && <CrossIcon width="2rem" height="2rem" />}
         </StyledMenuButton>
       </StyledNavMenuContent>
     </StyledNavMenuWrapper>
