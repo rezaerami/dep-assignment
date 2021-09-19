@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { color } from 'helpers';
 import { Container } from 'components/Globals';
-import { Header } from 'resources/images';
+import Header from 'resources/images/Header.jpg';
 
 export const StyledHeaderWrapper = Styled.header`
   background: url(${Header}) center center no-repeat scroll

@@ -3,10 +3,11 @@ import PropTypes from 'prop-types';
 
 import articles from 'constants/articles';
 
+import { Container } from 'components/Globals';
 import Article from 'components/Common/Article';
 import Comment from 'components/Common/Comment';
 
-import { Container } from 'components/Globals';
+import { Clients } from './partials';
 import { StyledHomeWrapper, StyledArticlesWrapper } from './styles';
 
 const HomePage = ({ className }) => {
@@ -27,6 +28,7 @@ const HomePage = ({ className }) => {
           )}
         </StyledArticlesWrapper>
       </Container>
+      <Clients />
     </StyledHomeWrapper>
   );
 };

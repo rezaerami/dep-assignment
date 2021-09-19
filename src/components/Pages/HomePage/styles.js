@@ -5,7 +5,7 @@ export const StyledHomeWrapper = Styled.div``;
 export const StyledArticlesWrapper = Styled.div`
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -1.5rem;
+  margin: 0 -1.5rem 8rem;;
   > * {
     margin-top: 8rem;
     flex: 1;
