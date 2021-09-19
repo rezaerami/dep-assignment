@@ -1,12 +1,10 @@
 import {
-  // eslint-disable-next-line no-unused-vars
   Arla,
   Bolcom,
   Florensis,
   Gemeentemuseum,
   Jbl,
   Kempen,
-  // eslint-disable-next-line no-unused-vars
   KoninklijkeBibliotheek,
   libertyGlobal,
   Lightning,
@@ -14,7 +12,7 @@ import {
   Tui,
   Zalando,
   Chocomel,
-} from 'resources/images';
+} from 'resources/images/articles';
 
 export default [
   {

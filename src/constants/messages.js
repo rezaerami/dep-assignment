@@ -23,6 +23,9 @@ const MESSAGES = {
   UNITED_KINGDOM: 'UNITED KINGDOM',
   DEUTSCHLAND: 'DEUTSCHLAND',
   SCHWEIZ: 'SCHWEIZ',
+  CLIENTS: 'CLIENTS',
+  CLIENTS_DESCRIPTION:
+    'We value a great working relationship with our clients above all else. It’s why they often come to our parties. It’s also why we’re able to challenge and inspire them to reach for the stars.',
 };
 
 export default MESSAGES;

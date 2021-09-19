@@ -3,9 +3,16 @@ import { color } from 'helpers';
 
 export const StyledCommentWrapper = Styled.article`
   flex: 1;
-  padding: 8rem 23rem 0;
+  padding: 8rem 0 0;
   color: ${color('black', 'dark')};
   border-top: solid 0.1rem ${color('white', 'dark')};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  > * {
+    width: 76rem;
+  }
 `;
 
 export const StyledCommentDescription = Styled.blockquote`
@@ -16,6 +23,7 @@ export const StyledCommentDescription = Styled.blockquote`
   line-height: 1.28;
   letter-spacing: normal;
   margin: 0;
+  max-width: 100%;
 `;
 
 export const StyledCommentAuthor = Styled.h4`
