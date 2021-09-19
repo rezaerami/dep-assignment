@@ -24,6 +24,7 @@ const Article = ({ article, className }) => {
         className={classNames(className, {
           'has-ads': !!ads.length,
         })}
+        key={id}
       >
         <StyledArticleContent>
           <Link to={link}>
