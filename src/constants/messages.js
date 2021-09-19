@@ -24,6 +24,14 @@ const MESSAGES = {
   DEUTSCHLAND: 'DEUTSCHLAND',
   SCHWEIZ: 'SCHWEIZ',
   CLIENTS: 'CLIENTS',
+  NAME: 'NAME',
+  EMAIL: 'EMAIL',
+  MESSAGE: 'MESSAGE',
+  SEND: 'SEND',
+  QUESTION: 'QUESTION? WE ARE HERE TO HELP!',
+  NAME_FIELD_IS_REQUIRED: 'Name field is required',
+  EMAIL_FIELD_IS_REQUIRED: 'Email field is required',
+  MESSAGE_FIELD_IS_REQUIRED: 'Message field is required',
   CLIENTS_DESCRIPTION:
     'We value a great working relationship with our clients above all else. It’s why they often come to our parties. It’s also why we’re able to challenge and inspire them to reach for the stars.',
 };

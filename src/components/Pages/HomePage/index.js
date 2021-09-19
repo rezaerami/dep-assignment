@@ -7,7 +7,7 @@ import { Container } from 'components/Globals';
 import Article from 'components/Common/Article';
 import Comment from 'components/Common/Comment';
 
-import { Clients } from './partials';
+import { Clients, Contact } from './partials';
 import { StyledHomeWrapper, StyledArticlesWrapper } from './styles';
 
 const HomePage = ({ className }) => {
@@ -29,6 +29,7 @@ const HomePage = ({ className }) => {
         </StyledArticlesWrapper>
       </Container>
       <Clients />
+      <Contact />
     </StyledHomeWrapper>
   );
 };

@@ -1,5 +1,4 @@
 import Styled from 'styled-components';
-import { Link } from 'react-router-dom';
 
 import { color } from 'helpers';
 import { Container } from 'components/Globals';
@@ -30,21 +29,4 @@ export const StyledTitle = Styled.h1`
   margin: 0;
   text-align: left;
   margin-top: 11rem;
-`;
-
-export const StyledLink = Styled(Link)`
-  width: 17rem;
-  display: inline-block;
-  padding: 0.8rem 0 1.2rem;
-  background-color: ${color('black', 'main')};
-  font-family: Arial;
-  font-size: 1.5rem;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 2;
-  letter-spacing: normal;
-  text-align: center;
-  color: ${color('white', 'light')};
-  align-self: flex-end
 `;
