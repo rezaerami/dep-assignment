@@ -12,7 +12,9 @@ import { StyledHomeWrapper, StyledArticlesWrapper } from './styles';
 const HomePage = ({ className }) => {
   const lookup = {
     article: (article) => <Article article={article} key={article.id} />,
-    comment: (comment) => <Comment comment={comment} key={comment.id} />,
+    comment: (comment) => (
+      <Comment className="comment" comment={comment} key={comment.id} />
+    ),
   };
 
   return (

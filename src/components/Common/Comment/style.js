@@ -3,9 +3,8 @@ import { color } from 'helpers';
 
 export const StyledCommentWrapper = Styled.article`
   flex: 1;
-  min-width: 100%;
   padding: 8rem 23rem 0;
-  color: ${color('black', '')};
+  color: ${color('black', 'dark')};
   border-top: solid 0.1rem ${color('white', 'dark')};
 `;
 
@@ -21,7 +20,7 @@ export const StyledCommentDescription = Styled.blockquote`
 
 export const StyledCommentAuthor = Styled.h4`
   margin: 2rem 0 0;
-   font-weight: bold;
+  font-weight: bold;
   font-stretch: normal;
   font-style: normal;
   line-height: 2.31;
