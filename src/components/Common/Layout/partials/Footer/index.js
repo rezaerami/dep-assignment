@@ -1,12 +1,71 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { Link } from 'react-router-dom';
 
-import { StyledFooterWrapper } from './styles';
+import routes from 'constants/routes';
+import footerLinks from 'constants/footerLinks';
+import MESSAGES from 'constants/messages';
+import { Container } from 'components/Globals';
+
+import {
+  ArrowTopIcon,
+  DeptIcon,
+  FacebookIcon,
+  InstagramIcon,
+  TwitterIcon,
+} from 'resources/icons';
+import {
+  StyledFooterMenuWrapper,
+  StyledFooterMenus,
+  StyledLogoWrapper,
+  StyledSocialMedias,
+  StyledFooterWrapper,
+  StyledPolicyWrapper,
+  StyledTerms,
+  StyledCopyright,
+  StyledGoToTop,
+} from './styles';
 
 const Footer = ({ className }) => (
   <StyledFooterWrapper className={classNames(className)}>
-    this is footer
+    <Container>
+      <StyledFooterMenuWrapper>
+        <StyledLogoWrapper>
+          <DeptIcon width="10rem" />
+        </StyledLogoWrapper>
+        <StyledFooterMenus>
+          {footerLinks.map(({ link, title }) => (
+            <Link to={link} key={title}>
+              {title}
+            </Link>
+          ))}
+        </StyledFooterMenus>
+        <StyledSocialMedias>
+          <a href={routes.home} title={MESSAGES.FACEBOOK} target="_blank">
+            <FacebookIcon width="1.5rem" height="1.5rem" />
+          </a>
+          <a href={routes.home} title={MESSAGES.TWITTER} target="_blank">
+            <TwitterIcon width="1.5rem" height="1.5rem" />
+          </a>
+          <a href={routes.home} title={MESSAGES.INSTAGRAM} target="_blank">
+            <InstagramIcon width="1.5rem" height="1.5rem" />
+          </a>
+        </StyledSocialMedias>
+      </StyledFooterMenuWrapper>
+      <StyledPolicyWrapper>
+        <StyledTerms>
+          <span>{MESSAGES.CHAMBER}</span>
+          <span>{MESSAGES.VAT}</span>
+          <Link to={routes.home}>{MESSAGES.TERMS_AND_CONDITIONS}</Link>
+        </StyledTerms>
+        <StyledCopyright>{MESSAGES.COPYRIGHT}</StyledCopyright>
+      </StyledPolicyWrapper>
+    </Container>
+    <StyledGoToTop onClick={() => window.scrollTo(0, 0)}>
+      <ArrowTopIcon height="3.5rem" />
+      <span>{MESSAGES.TOP}</span>
+    </StyledGoToTop>
   </StyledFooterWrapper>
 );
 
