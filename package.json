@@ -36,7 +36,8 @@
     "lint:eslint": "eslint",
     "lint:eslint:fix": "eslint src --fix",
     "lint:js": "yarn run lint:eslint -- . ",
-    "lint:staged": "lint-staged"
+    "lint:staged": "lint-staged",
+    "start:api": "nodemon server/src/runner.js"
   },
   "eslintConfig": {
     "extends": [
@@ -70,6 +71,7 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-redux-saga": "^1.2.1",
     "lint-staged": "^11.1.2",
+    "nodemon": "^2.0.12",
     "pre-commit": "^1.2.2",
     "prettier": "^2.3.2",
     "stylelint": "^13.13.1",
@@ -87,5 +89,11 @@
       "prettier --write",
       "git add --force"
     ]
+  },
+  "nodemonConfig": {
+    "watch": [
+      "server/**/*.js"
+    ],
+    "delay": 1500
   }
 }
