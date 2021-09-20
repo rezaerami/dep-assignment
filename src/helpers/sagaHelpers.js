@@ -3,11 +3,11 @@ import axios from 'axios';
 
 import messageActions from 'ducks/message/actions';
 
-export function* callService(service, action, params = {}) {
+export function* callService(service, params = {}) {
   const config = {
     headers: {},
     timeout: process.env.API_TIMEOUT,
-    withCredentials: true,
+    withCredentials: false,
     ...service(params),
   };
 

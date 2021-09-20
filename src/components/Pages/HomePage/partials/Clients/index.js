@@ -5,7 +5,6 @@ import { Link, generatePath } from 'react-router-dom';
 
 import MESSAGES from 'constants/messages';
 import routes from 'constants/routes';
-import clients from 'constants/clients';
 
 import { Container } from 'components/Globals';
 
@@ -17,6 +16,8 @@ import {
   StyledClient,
   StyledClientLogo,
 } from './styles';
+
+const clients = [];
 
 const Clients = ({ className }) => (
   <StyledClientsWrapper className={classNames(className)}>

@@ -11,8 +11,15 @@ import {
   StyledSelect,
 } from './styles';
 
-const Filters = ({ className, filters, onChangeFilters }) => {
-  const [selectedFilters, setSelectedFilters] = useState({});
+const Filters = ({
+  className,
+  filters,
+  initialSelectedFilters,
+  onChangeFilters,
+}) => {
+  const [selectedFilters, setSelectedFilters] = useState(
+    initialSelectedFilters,
+  );
 
   useDidUpdateEffect(() => {
     onChangeFilters(selectedFilters);
@@ -27,7 +34,7 @@ const Filters = ({ className, filters, onChangeFilters }) => {
 
   const filtersLookup = {
     select: ({ label, name, children }) => (
-      <StyledSelectWrapper>
+      <StyledSelectWrapper key={name}>
         <StyledSelectTitle>{label}</StyledSelectTitle>
         <StyledSelect
           onChange={handleSelectFilter(name)}
@@ -60,10 +67,12 @@ const Filters = ({ className, filters, onChangeFilters }) => {
 Filters.propTypes = {
   className: PropTypes.string,
   filters: PropTypes.array,
+  initialSelectedFilters: PropTypes.object,
   onChangeFilters: PropTypes.func.isRequired,
 };
 Filters.defaultProps = {
   className: '',
+  initialSelectedFilters: {},
   filters: [],
 };
 

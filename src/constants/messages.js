@@ -1,4 +1,6 @@
 const MESSAGES = {
+  LOADING: 'LOADING',
+  NO_RESULT: 'NO RESULT',
   HOME: 'HOME',
   MENU: 'MENU',
   WORK: 'WORK',
