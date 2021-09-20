@@ -2,7 +2,7 @@ const articles = [
   {
     id: 1,
     type: 'ARTICLE',
-    image: 'images/articles/bolcom.png',
+    image: `${process.env.REACT_APP_API_BASE_URI}/images/articles/bolcom.png`,
     subtitle: 'Bol.com',
     industry: 'Bol.com',
     work: 'Frontend',
@@ -12,7 +12,7 @@ const articles = [
   {
     id: 2,
     type: 'ARTICLE',
-    image: 'images/articles/kempen.png',
+    image: `${process.env.REACT_APP_API_BASE_URI}/images/articles/kempen.png`,
     subtitle: 'Kempen',
     industry: 'Kempen',
     work: 'Frontend',
@@ -22,7 +22,7 @@ const articles = [
   {
     id: 3,
     type: 'ARTICLE',
-    image: 'images/articles/philips.png',
+    image: `${process.env.REACT_APP_API_BASE_URI}/images/articles/philips.png`,
     subtitle: 'Philips',
     industry: 'Philips',
     work: 'Frontend',
@@ -32,7 +32,7 @@ const articles = [
   {
     id: 4,
     type: 'ARTICLE',
-    image: 'images/articles/gemeentemuseum.png',
+    image: `${process.env.REACT_APP_API_BASE_URI}/images/articles/gemeentemuseum.png`,
     subtitle: 'Gemeentemuseum',
     industry: 'Gemeentemuseum',
     work: 'Frontend',
@@ -42,7 +42,7 @@ const articles = [
   {
     id: 5,
     type: 'ARTICLE',
-    image: 'images/articles/florensis.png',
+    image: `${process.env.REACT_APP_API_BASE_URI}/images/articles/florensis.png`,
     subtitle: 'Florensis',
     industry: 'Florensis',
     work: 'Backend',
@@ -67,7 +67,7 @@ const articles = [
   {
     id: 8,
     type: 'ARTICLE',
-    image: 'images/articles/lightning.png',
+    image: `${process.env.REACT_APP_API_BASE_URI}/images/articles/lightning.png`,
     subtitle: 'Be Lighting',
     industry: 'Be Lighting',
     work: 'Backend',
@@ -77,7 +77,7 @@ const articles = [
   {
     id: 9,
     type: 'ARTICLE',
-    image: 'images/articles/tui.png',
+    image: `${process.env.REACT_APP_API_BASE_URI}/images/articles/tui.png`,
     subtitle: 'Tui',
     industry: 'Tui',
     work: 'Backend',
@@ -87,7 +87,7 @@ const articles = [
   {
     id: 12,
     type: 'ARTICLE',
-    image: 'images/articles/florensis.png',
+    image: `${process.env.REACT_APP_API_BASE_URI}/images/articles/florensis.png`,
     subtitle: 'Florensis',
     industry: 'Florensis',
     work: 'Backend',
@@ -112,7 +112,7 @@ const articles = [
   {
     id: 13,
     type: 'ARTICLE',
-    image: 'images/articles/chocomel.png',
+    image: `${process.env.REACT_APP_API_BASE_URI}/images/articles/chocomel.png`,
     subtitle: 'Chocomel',
     industry: 'Chocomel',
     work: 'Backend',
@@ -122,7 +122,7 @@ const articles = [
   {
     id: 14,
     type: 'ARTICLE',
-    image: 'images/articles/jbl.png',
+    image: `${process.env.REACT_APP_API_BASE_URI}/images/articles/jbl.png`,
     subtitle: 'JBL',
     industry: 'JBL',
     work: 'Backend',
@@ -132,7 +132,7 @@ const articles = [
   {
     id: 15,
     type: 'ARTICLE',
-    image: 'images/articles/zalando.png',
+    image: `${process.env.REACT_APP_API_BASE_URI}/images/articles/zalando.png`,
     subtitle: 'zalando',
     industry: 'zalando',
     work: 'Devops',
@@ -142,7 +142,7 @@ const articles = [
   {
     id: 16,
     type: 'ARTICLE',
-    image: 'images/articles/koninklijkeBibliotheek.png',
+    image: `${process.env.REACT_APP_API_BASE_URI}/images/articles/koninklijke-bibliotheek.png`,
     subtitle: 'Koninklijke Bibliotheek',
     industry: 'Koninklijke Bibliotheek',
     work: 'Devops',
@@ -159,7 +159,7 @@ const articles = [
   {
     id: 18,
     type: 'ARTICLE',
-    image: 'images/articles/arla.png',
+    image: `${process.env.REACT_APP_API_BASE_URI}/images/articles/arla.png`,
     subtitle: 'Liberty Global',
     industry: 'Liberty Global',
     work: 'Devops',
@@ -169,7 +169,7 @@ const articles = [
   {
     id: 19,
     type: 'ARTICLE',
-    image: 'images/articles/libertyGlobal.png',
+    image: `${process.env.REACT_APP_API_BASE_URI}/images/articles/liberty-Global.png`,
     subtitle: 'Arla',
     industry: 'Arla',
     work: 'Devops',

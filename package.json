@@ -37,7 +37,7 @@
     "lint:eslint:fix": "eslint src --fix",
     "lint:js": "yarn run lint:eslint -- . ",
     "lint:staged": "lint-staged",
-    "start:api": "nodemon server/src/runner.js"
+    "start:api": "env-cmd -f .env nodemon server/src/runner.js"
   },
   "eslintConfig": {
     "extends": [
@@ -60,6 +60,8 @@
   "devDependencies": {
     "@babel/eslint-parser": "^7.15.4",
     "@babel/preset-react": "^7.14.5",
+    "cors": "^2.8.5",
+    "env-cmd": "^10.1.0",
     "eslint": "^7.31.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-airbnb-base": "^14.2.1",

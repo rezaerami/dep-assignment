@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 
-import menus from 'constants/menus';
 import { Container } from 'components/Globals';
 import {
   StyledMegaMenuWrapper,
@@ -13,6 +12,8 @@ import {
   StyledSubMenuWrapper,
   StyledSubMenuItem,
 } from './styles';
+
+const menus = [];
 
 const MegaMenu = ({ className }) => {
   useEffect(() => {

@@ -1,6 +1,7 @@
 const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 const {
   getArticles,
@@ -11,20 +12,28 @@ const {
 
 const app = express();
 
+const corsOptions = {
+  origin: '*',
+  methods: '*',
+  preflightContinue: false,
+  optionsSuccessStatus: 200,
+};
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.resolve('server', 'public')));
+app.use(cors(corsOptions));
 
-app.get('/articles', async (req, res) => {
+app.get('/articles', (req, res) => {
   res.send(getArticles(req));
 });
-app.get('/menus', async (req, res) => {
+app.get('/menus', (req, res) => {
   res.send(getMenus());
 });
-app.get('/clients', async (req, res) => {
+app.get('/clients', (req, res) => {
   res.send(getClients());
 });
-app.get('/footer-links', async (req, res) => {
+app.get('/footer-links', (req, res) => {
   res.send(getFooterLinks());
 });
 

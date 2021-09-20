@@ -4,7 +4,6 @@ import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 
 import routes from 'constants/routes';
-import footerLinks from 'constants/footerLinks';
 import MESSAGES from 'constants/messages';
 import { Container } from 'components/Globals';
 
@@ -27,6 +26,7 @@ import {
   StyledGoToTop,
 } from './styles';
 
+const footerLinks = [];
 const Footer = ({ className }) => (
   <StyledFooterWrapper className={classNames(className)}>
     <Container>

@@ -25,12 +25,12 @@ const getArticles = (req) => {
 
   workFilters.unshift({
     title: 'All Works',
-    value: null,
+    value: '',
   });
 
   industryFilters.unshift({
     title: 'All Industries',
-    value: null,
+    value: '',
   });
 
   const filters = [
