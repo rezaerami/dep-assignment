@@ -37,6 +37,7 @@ export const StyledSelectTitle = Styled.label`
 `;
 
 export const StyledSelect = Styled.select`
+  background: none;
   color: ${color('black', 'main')};
   border: none;
   font-size: inherit;
