@@ -3,6 +3,8 @@ import {
   loadingReducers,
   messageReducers,
   articleReducers,
+  uiReducers,
+  clientReducers,
 } from 'ducks';
 
 const rootReducers = {
@@ -10,6 +12,8 @@ const rootReducers = {
   loading: loadingReducers,
   message: messageReducers,
   articles: articleReducers,
+  ui: uiReducers,
+  clients: clientReducers,
 };
 
 export default rootReducers;

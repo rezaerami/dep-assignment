@@ -1,7 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
+
+import { uiSelectors } from 'ducks/ui';
 
 import routes from 'constants/routes';
 import MESSAGES from 'constants/messages';
@@ -14,6 +17,7 @@ import {
   InstagramIcon,
   TwitterIcon,
 } from 'resources/icons';
+
 import {
   StyledFooterMenuWrapper,
   StyledFooterMenus,
@@ -26,8 +30,7 @@ import {
   StyledGoToTop,
 } from './styles';
 
-const footerLinks = [];
-const Footer = ({ className }) => (
+const Footer = ({ className, footerLinks }) => (
   <StyledFooterWrapper className={classNames(className)}>
     <Container>
       <StyledFooterMenuWrapper>
@@ -71,9 +74,14 @@ const Footer = ({ className }) => (
 
 Footer.propTypes = {
   className: PropTypes.string,
+  footerLinks: PropTypes.array,
 };
 Footer.defaultProps = {
   className: '',
 };
 
-export default Footer;
+const mapStateToProps = (state) => ({
+  footerLinks: uiSelectors.getFooterLinksResults(state),
+});
+
+export default connect(mapStateToProps)(Footer);

@@ -1,9 +1,13 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 
+import { uiSelectors } from 'ducks/ui';
+
 import { Container } from 'components/Globals';
+
 import {
   StyledMegaMenuWrapper,
   StyledMenuWrapper,
@@ -13,9 +17,7 @@ import {
   StyledSubMenuItem,
 } from './styles';
 
-const menus = [];
-
-const MegaMenu = ({ className }) => {
+const MegaMenu = ({ className, menus }) => {
   useEffect(() => {
     document.body.style.overflow = 'hidden';
 
@@ -54,9 +56,14 @@ const MegaMenu = ({ className }) => {
 
 MegaMenu.propTypes = {
   className: PropTypes.string,
+  menus: PropTypes.array,
 };
 MegaMenu.defaultProps = {
   className: '',
 };
 
-export default MegaMenu;
+const mapStateToProps = (state) => ({
+  menus: uiSelectors.getMenusResults(state),
+});
+
+export default connect(mapStateToProps)(MegaMenu);
