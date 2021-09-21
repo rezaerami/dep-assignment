@@ -10,7 +10,7 @@ const additional = css`
     text-align: left;
     direction: ltr;
     font-size: 62.5%;
-    font-family: ${(props) => props.theme.defaultFont};
+    font-family: ${(props) => props.theme.defaultFont}, Arial;
     scroll-behavior: smooth;
     * {
       font-family: inherit;
