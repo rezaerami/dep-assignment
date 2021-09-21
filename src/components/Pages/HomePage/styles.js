@@ -3,6 +3,7 @@ import { viewport } from 'helpers';
 import Article from 'components/Common/Article';
 
 export const StyledHomeWrapper = Styled.div``;
+
 export const StyledArticle = Styled(Article)`
   animation fadeIn 0.3s ease-in ${(props) => props.index * 0.1}s both;
 `;

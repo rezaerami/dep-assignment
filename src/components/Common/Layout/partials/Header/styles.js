@@ -35,11 +35,12 @@ export const StyledTitle = Styled.h1`
   line-height: 1;
   letter-spacing: normal;
   margin: 0;
-
-  font-size: 17.8rem;
   text-align: center;
-
   margin: 8rem 0;
+  font-size: 14rem;
+  @media (min-width: ${viewport('sm')}) {
+    font-size: 17.8rem;
+  }
   @media (min-width: ${viewport('md')}) {
     margin-top: 11rem;
     margin-bottom: 0;
