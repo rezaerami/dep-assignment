@@ -8,6 +8,7 @@ import { uiSelectors } from 'ducks/ui';
 
 import { Container } from 'components/Globals';
 
+import { AngleRight } from 'resources/icons';
 import {
   StyledMegaMenuWrapper,
   StyledMenuWrapper,
@@ -28,8 +29,13 @@ const MegaMenu = ({ className, menus }) => {
 
   const renderChildren = (children) => (
     <StyledSubMenuWrapper>
-      {children.map(({ title, link }) => (
-        <StyledSubMenuItem key={title}>
+      {children.map(({ title, link }, index) => (
+        <StyledSubMenuItem
+          key={title}
+          index={index}
+          className={!index ? 'selected' : ''}
+        >
+          <AngleRight />
           <Link to={link}>{title}</Link>
         </StyledSubMenuItem>
       ))}
@@ -40,9 +46,10 @@ const MegaMenu = ({ className, menus }) => {
     <StyledMegaMenuWrapper className={classNames(className)}>
       <Container>
         <StyledMenuWrapper>
-          {menus.map(({ title, link, children = [] }) => (
-            <StyledMenuItem key={title}>
+          {menus.map(({ title, link, children = [] }, index) => (
+            <StyledMenuItem index={index} key={title}>
               <StyledMenuTitle>
+                <AngleRight />
                 <Link to={link}>{title}</Link>
               </StyledMenuTitle>
               {!!children.length && renderChildren(children)}

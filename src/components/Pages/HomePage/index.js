@@ -9,7 +9,6 @@ import GLOBALS from 'constants/globals';
 import MESSAGES from 'constants/messages';
 
 import { Container, Filters } from 'components/Globals';
-import Article from 'components/Common/Article';
 import Comment from 'components/Common/Comment';
 
 import { Clients, Contact } from './partials';
@@ -17,6 +16,7 @@ import {
   StyledHomeWrapper,
   StyledArticlesWrapper,
   StyledMessage,
+  StyledArticle,
 } from './styles';
 
 const HomePage = ({
@@ -50,8 +50,13 @@ const HomePage = ({
   };
 
   const lookup = {
-    article: (article) => (
-      <Article className="article" article={article} key={article.id} />
+    article: (article, index) => (
+      <StyledArticle
+        className="article"
+        article={article}
+        key={article.id}
+        index={index}
+      />
     ),
     comment: (comment) => (
       <Comment className="comment" comment={comment} key={comment.id} />
@@ -73,8 +78,9 @@ const HomePage = ({
         <StyledArticlesWrapper>
           {!!articles.length &&
             articles.map(
-              ({ type, ...item }) =>
-                lookup[type.toLowerCase()] && lookup[type.toLowerCase()](item),
+              ({ type, ...item }, index) =>
+                lookup[type.toLowerCase()] &&
+                lookup[type.toLowerCase()](item, index),
             )}
         </StyledArticlesWrapper>
       </Container>

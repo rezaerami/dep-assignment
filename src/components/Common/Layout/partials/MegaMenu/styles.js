@@ -5,6 +5,7 @@ export const StyledMegaMenuWrapper = Styled.div`
   background: ${color('black', 'main')};
   z-index: ${zIndex('high')};
   position: fixed;
+  animation fadeIn 0.1s ease-in both;
   left: 0;
   right: 0;
   bottom: 0;
@@ -18,6 +19,7 @@ export const StyledMegaMenuWrapper = Styled.div`
   a {
     color: inherit;
   }
+
 `;
 
 export const StyledMenuWrapper = Styled.ul`
@@ -34,6 +36,7 @@ export const StyledMenuItem = Styled.li`
   align-items: flex-end;
   justify-content: space-between;
   flex-direction: row-reverse;
+  animation fadeIn 0.3s ease-in ${(props) => props.index * 0.1}s both;
   &:not(:last-child){
     > span {
       border-bottom: solid 0.1rem ${makeRgba(0.5, 'gray', 'light')};
@@ -44,6 +47,9 @@ export const StyledMenuItem = Styled.li`
 export const StyledMenuTitle = Styled.span`
   flex: 1;
   text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 
   > a {
     font-weight: normal;
@@ -57,6 +63,20 @@ export const StyledMenuTitle = Styled.span`
       font-size: 11rem;
     }
   }
+  > svg {
+    width: 2.8rem;
+    height: 2.8rem;
+    margin-right: 4rem;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 0.1s ease 0s;
+  }
+  &:hover {
+    > svg {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
 `;
 
 export const StyledSubMenuWrapper = Styled(StyledMenuWrapper)`
@@ -67,6 +87,15 @@ export const StyledSubMenuWrapper = Styled(StyledMenuWrapper)`
 `;
 
 export const StyledSubMenuItem = Styled.li`
+  display: flex;
+  align-items: center;
+  transform: translateX(-1.7rem);
+  transition: all 0.1s ease 0s;
+  animation fadeIn 0.3s ease-in ${(props) => props.index * 0.1}s both;
+  &.selected {
+    color: ${color('gray', 'light')};
+  }
+
   > a {
     font-family: Arial;
     font-size: 1.2rem;
@@ -75,5 +104,18 @@ export const StyledSubMenuItem = Styled.li`
     font-style: normal;
     line-height: 1.58;
     letter-spacing: normal;
+  }
+  > svg {
+    margin-right: 1rem;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: inherit;
+  }
+  &:hover {
+    transform: translateX(0);
+    > svg {
+      opacity: 1;
+      transform: translateX(0);
+    }
   }
 `;

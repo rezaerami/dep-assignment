@@ -9,10 +9,9 @@ export const StyledFiltersWrapper = Styled.div`
 
   @media (min-width: ${viewport('md')}) {
     margin-top: 6rem;
-      align-items: center;
-      justify-content: flex-end;
-      flex-direction: row;
-    }
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: row;
   }
 `;
 
@@ -25,6 +24,7 @@ export const StyledSelectWrapper = Styled.div`
   &:not(:last-child){
     margin-bottom: 2rem;
     @media (min-width: ${viewport('md')}) {
+      margin-bottom: 0;
       margin-right: 2.4rem;
     }
   }
