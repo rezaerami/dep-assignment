@@ -13,7 +13,6 @@ export const StyledButton = Styled.button`
   line-height: 2;
   letter-spacing: normal;
   text-align: center;
-  align-self: flex-end;
   border: none;
   background-color: ${(props) => color(props.status, 'main')(props)};
   color: ${(props) => color(props.color, 'light')(props)};

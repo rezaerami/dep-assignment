@@ -30,3 +30,5 @@ export const makeRgba =
   };
 
 export const zIndex = (layer) => (props) => props.theme.zIndex[layer];
+
+export const viewport = (media) => (props) => props.theme.viewports[media];

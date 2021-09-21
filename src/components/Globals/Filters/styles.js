@@ -1,11 +1,19 @@
 import Styled from 'styled-components';
-import { color } from 'helpers';
+import { color, viewport } from 'helpers';
 
 export const StyledFiltersWrapper = Styled.div`
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  margin-top: 6rem;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 1rem;
+
+  @media (min-width: ${viewport('md')}) {
+    margin-top: 6rem;
+      align-items: center;
+      justify-content: flex-end;
+      flex-direction: row;
+    }
+  }
 `;
 
 export const StyledSelectWrapper = Styled.div`
@@ -15,7 +23,10 @@ export const StyledSelectWrapper = Styled.div`
   font-weight: 500;
   line-height: 1.07;
   &:not(:last-child){
-    margin-right: 2.4rem;
+    margin-bottom: 2rem;
+    @media (min-width: ${viewport('md')}) {
+      margin-right: 2.4rem;
+    }
   }
 `;
 

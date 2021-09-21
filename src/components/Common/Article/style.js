@@ -1,12 +1,19 @@
 import Styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { color } from 'helpers';
+import { color, viewport } from 'helpers';
 
 export const StyledArticleWrapper = Styled.div`
   &.has-ads {
     display: flex;
+    flex-direction: column;
+    @media (min-width: ${viewport('md')}) {
+      flex-direction: row;
+    }
     > article {
-      width: 66%;
+      width: 100%;
+      @media (min-width: ${viewport('md')}) {
+        width: 66%;
+      }
     }
   }
   a {
@@ -56,13 +63,21 @@ export const StyledArticleLink = Styled(Link)`
 `;
 
 export const StyledAdWrapper = Styled.div`
-  width: 33%;
-  padding-left: 3rem;
+  width: 100%;
+  @media (min-width: ${viewport('md')}) {
+    width: 33%;
+    padding-left: 3rem;
+  }
   > * {
     border-bottom: 0.1rem solid ${color('white', 'dark')};
-    padding-bottom: 8rem;
     &:first-child {
+      margin-top: 4rem;
+      padding-bottom: 3rem;
       border-top: 0.1rem solid ${color('white', 'dark')};
+      @media (min-width: ${viewport('md')}) {
+        margin-top: 0;
+        padding-bottom: 8rem;
+      }
     }
   }
 `;

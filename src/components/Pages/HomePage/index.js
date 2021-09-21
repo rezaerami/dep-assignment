@@ -50,7 +50,9 @@ const HomePage = ({
   };
 
   const lookup = {
-    article: (article) => <Article article={article} key={article.id} />,
+    article: (article) => (
+      <Article className="article" article={article} key={article.id} />
+    ),
     comment: (comment) => (
       <Comment className="comment" comment={comment} key={comment.id} />
     ),

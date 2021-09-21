@@ -1,16 +1,19 @@
 import Styled from 'styled-components';
-import { color, makeRgba, zIndex } from 'helpers';
+import { color, makeRgba, viewport, zIndex } from 'helpers';
 
 export const StyledMegaMenuWrapper = Styled.div`
   background: ${color('black', 'main')};
   z-index: ${zIndex('high')};
   position: fixed;
-  top: 9rem;
   left: 0;
   right: 0;
   bottom: 0;
   width: 100%;
   overflow-y: auto;
+  top: 5rem;
+  @media (min-width: ${viewport('md')}) {
+    top: 8rem;
+  }
 
   a {
     color: inherit;
@@ -43,18 +46,24 @@ export const StyledMenuTitle = Styled.span`
   text-align: right;
 
   > a {
-    font-size: 11rem;
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
     line-height: 1;
     letter-spacing: normal;
     text-align: right;
+    font-size: 5rem;
+    @media (min-width: ${viewport('md')}) {
+      font-size: 11rem;
+    }
   }
 `;
 
 export const StyledSubMenuWrapper = Styled(StyledMenuWrapper)`
-
+  display: none;
+  @media (min-width: ${viewport('md')}) {
+    display: block;
+  }
 `;
 
 export const StyledSubMenuItem = Styled.li`
