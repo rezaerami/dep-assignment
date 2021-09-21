@@ -11,15 +11,18 @@ import {
   StyledHeaderWrapper,
   StyledHeaderContainer,
   StyledTitle,
+  StyledButtonWrapper,
 } from './styles';
 
 const Header = ({ className }) => (
   <StyledHeaderWrapper className={classNames(className)}>
     <StyledHeaderContainer>
       <StyledTitle>{MESSAGES.WORK}</StyledTitle>
-      <Button as={Link} to={routes.home}>
-        {MESSAGES.VIEW_CASE}
-      </Button>
+      <StyledButtonWrapper>
+        <Button as={Link} to={routes.home}>
+          {MESSAGES.VIEW_CASE}
+        </Button>
+      </StyledButtonWrapper>
     </StyledHeaderContainer>
   </StyledHeaderWrapper>
 );

@@ -46,13 +46,13 @@ const Footer = ({ className, footerLinks }) => (
         </StyledFooterMenus>
         <StyledSocialMedias>
           <a href={routes.home} title={MESSAGES.FACEBOOK} target="_blank">
-            <FacebookIcon width="1.5rem" height="1.5rem" />
+            <FacebookIcon />
           </a>
           <a href={routes.home} title={MESSAGES.TWITTER} target="_blank">
-            <TwitterIcon width="1.5rem" height="1.5rem" />
+            <TwitterIcon />
           </a>
           <a href={routes.home} title={MESSAGES.INSTAGRAM} target="_blank">
-            <InstagramIcon width="1.5rem" height="1.5rem" />
+            <InstagramIcon />
           </a>
         </StyledSocialMedias>
       </StyledFooterMenuWrapper>

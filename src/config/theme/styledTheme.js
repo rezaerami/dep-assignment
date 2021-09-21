@@ -1,13 +1,21 @@
 export default {
   defaultRem: '1rem',
   defaultFont: 'Teko-Regular',
-  containerWidth: '120rem',
+  containerWidth: '1200px',
 
   zIndex: {
     high: 999,
     medium: 555,
     low: 100,
     unset: 0,
+  },
+
+  viewports: {
+    xs: '0px',
+    sm: '414px',
+    md: '768px',
+    lg: '992px',
+    xl: '1200px',
   },
 
   colors: {

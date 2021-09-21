@@ -44,7 +44,7 @@ const NavMenu = ({ className }) => {
     >
       <StyledNavMenuContent>
         <Link to={routes.home}>
-          <DeptIcon width={100} />
+          <DeptIcon />
         </Link>
         <StyledMenuButton
           onClick={() => setIsMegaMenuVisible(!isMegaMenuVisible)}

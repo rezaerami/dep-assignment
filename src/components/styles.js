@@ -8,7 +8,7 @@ import 'resources/styles/teko.css';
 const additional = css`
   html {
     text-align: left;
-    direction: lte;
+    direction: ltr;
     font-size: 62.5%;
     font-family: ${(props) => props.theme.defaultFont};
     scroll-behavior: smooth;
