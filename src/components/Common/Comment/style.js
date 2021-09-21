@@ -3,13 +3,16 @@ import { color, viewport } from 'helpers';
 
 export const StyledCommentWrapper = Styled.article`
   flex: 1;
-  padding-top: 8rem;
   color: ${color('black', 'dark')};
   border-top: solid 0.1rem ${color('white', 'dark')};
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding-top: 4rem;
+  @media (min-width: ${viewport('md')}) {
+    padding-top: 8rem;
+  }
   > * {
     width: 76rem;
     max-width: 100%;
