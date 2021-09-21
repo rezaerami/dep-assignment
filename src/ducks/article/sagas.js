@@ -3,7 +3,7 @@ import { put, takeLatest } from 'redux-saga/effects';
 import { callService, globalSagaCatcher } from 'helpers';
 import { articleActions, articleServices, articleTypes } from 'ducks';
 
-function* getArticles(action) {
+function* getArticlesRequest(action) {
   const { payload: params } = action;
   try {
     const response = yield callService(articleServices.getArticles, { params });
@@ -14,7 +14,7 @@ function* getArticles(action) {
 }
 
 const articleSagas = [
-  takeLatest(articleTypes.GET_ARTICLES_REQUEST, getArticles),
+  takeLatest(articleTypes.GET_ARTICLES_REQUEST, getArticlesRequest),
 ];
 
 export default articleSagas;

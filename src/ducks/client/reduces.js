@@ -1,4 +1,4 @@
-import articlesTypes from './types';
+import clientTypes from './types';
 
 export const initialStates = {
   list: {
@@ -7,9 +7,9 @@ export const initialStates = {
   },
 };
 
-const articlesReducers = (state = initialStates, action) => {
+const clientsReducers = (state = initialStates, action) => {
   switch (action.type) {
-    case articlesTypes.GET_ARTICLES_SUCCESS:
+    case clientTypes.GET_CLIENTS_SUCCESS:
       return {
         ...state,
         list: action.payload,
@@ -19,4 +19,4 @@ const articlesReducers = (state = initialStates, action) => {
   }
 };
 
-export default articlesReducers;
+export default clientsReducers;
