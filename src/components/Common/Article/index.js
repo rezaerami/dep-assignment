@@ -6,6 +6,7 @@ import classNames from 'classnames';
 import routes from 'constants/routes';
 import MESSAGES from 'constants/messages';
 
+import { AngleRight } from 'resources/icons';
 import {
   StyledArticleImage,
   StyledArticleLink,
@@ -36,7 +37,10 @@ const Article = ({ article, className }) => {
           <StyledArticleTitle>
             <Link to={link}>{title}</Link>
           </StyledArticleTitle>
-          <StyledArticleLink to={link}>{MESSAGES.VIEW_CASE}</StyledArticleLink>
+          <StyledArticleLink to={link}>
+            <AngleRight />
+            {MESSAGES.VIEW_CASE}
+          </StyledArticleLink>
         </StyledArticleContent>
         {!!ads.length && (
           <StyledAdWrapper>

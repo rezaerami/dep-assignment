@@ -60,6 +60,9 @@ export const StyledArticleLink = Styled(Link)`
   line-height: 2.14;
   letter-spacing: normal;
   color: ${color('blue', 'main')} !important;
+  svg {
+    margin-right: 1rem;
+  }
 `;
 
 export const StyledAdWrapper = Styled.div`
