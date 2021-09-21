@@ -1,5 +1,5 @@
 import Styled from 'styled-components';
-import { color, viewport } from 'helpers';
+import { color, viewport, zIndex } from 'helpers';
 
 import { Container } from 'components/Globals';
 
@@ -12,6 +12,7 @@ export const StyledNavMenuWrapper = Styled.nav`
   left: 0;
   right: 0;
   top: 0;
+  z-index: ${zIndex('high')};
   @media (min-width: ${viewport('md')}) {
     background-color: transparent;
   }
